@@ -10,7 +10,7 @@ export const CoreLayout = React.createClass({
 
   render () {
     return (
-      <div className="container text-center">
+      <div className="container">
         <Header />
         <div className={classes.mainContainer}>
           {this.props.children}

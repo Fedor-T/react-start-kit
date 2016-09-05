@@ -1,7 +1,6 @@
 import React from 'react'
 import { Router, Route, hashHistory } from 'react-router'
-import Home from 'views/Home'
-import Counter from 'views/Counter'
+import PostList from 'views/PostList'
 
 // use browserHistory for origin routing
 
@@ -9,8 +8,7 @@ const AppRouter = React.createClass({
   render () {
     return (
       <Router history={hashHistory}>
-        <Route path="/" component={Home} />
-        <Route path="/counter" component={Counter} />
+        <Route path="/" component={PostList} />
       </Router>
     )
   }

@@ -1,8 +1,14 @@
 import React from 'react'
-import { IndexLink, Link } from 'react-router'
+import { IndexLink } from 'react-router'
 import classes from './Header.scss'
+import PostDispatcher from 'dispatchers/PostDispatcher'
 
 export const Header = React.createClass({
+
+  _newPost () {
+    PostDispatcher.newPost()
+  },
+
   render () {
     return (
       <div>
@@ -11,9 +17,9 @@ export const Header = React.createClass({
           Home
         </IndexLink>
         {' · '}
-        <Link to="/counter" activeClassName={classes.activeRoute}>
-          Counter
-        </Link>
+        <a onClick={this._newPost}>
+          New Post
+        </a>
       </div>
     )
   }
